@@ -10,21 +10,24 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="portfolio of RHAGIOKA" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<header><a href="/portfolio"><span>rhagioka's portfolio</span></a></header>
+		<main>
 		<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 136, 108, 134;
+		--accent-light: 204, 204, 250;
+		--accent-dark: 100, 100, 150;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -34,9 +37,12 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #eeeeee;
 		background-size: 224px;
 	}
+	body {
+      margin: 0;
+    }
 	code {
 		font-family:
 			Menlo,
@@ -48,4 +54,16 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	header {
+      background-color: #fff;
+      height: 48px;
+    }
+	span {
+      font-size: 32px;
+    }
+	a {
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+    }
 </style>
